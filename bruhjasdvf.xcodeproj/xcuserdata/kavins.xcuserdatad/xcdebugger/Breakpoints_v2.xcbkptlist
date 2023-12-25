@@ -18,6 +18,53 @@
             endingLineNumber = "49"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7D355457-8FD3-4FF7-962F-5F54AE32B8AA - 3e8a815db22ea818"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bruhjasdvf.ContentView.body.getter : some"
+                  moduleName = "bruhjasdvf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kavins/Desktop/bruhjasdvf/bruhjasdvf/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "7D355457-8FD3-4FF7-962F-5F54AE32B8AA - 5c89ebe08a45a6a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in bruhjasdvf.ContentView.body.getter : some"
+                  moduleName = "bruhjasdvf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kavins/Desktop/bruhjasdvf/bruhjasdvf/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "7D355457-8FD3-4FF7-962F-5F54AE32B8AA - 29b247598624bb13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 () -&gt; () in implicit closure #1 (bruhjasdvf.ContentView) -&gt; () -&gt; () in bruhjasdvf.ContentView.body.getter : some"
+                  moduleName = "bruhjasdvf"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kavins/Desktop/bruhjasdvf/bruhjasdvf/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
