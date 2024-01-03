@@ -10,10 +10,12 @@ import SwiftUI
 struct TodoItem: Identifiable, Encodable, Decodable {
     var id = UUID()
     let todo: String
+    let dateAdded: String
 }
 
 struct ContentView: View {
-    
+    let gray = Color(red: 0.4627, green: 0.8392, blue: 1.0)
+
     @State private var newTodo = ""
     @State private var allTodos: [TodoItem] = []
     
@@ -24,24 +26,31 @@ struct ContentView: View {
                     TextField("Add todo...", text: $newTodo).textFieldStyle(RoundedBorderTextFieldStyle())
                     Button(action:  {
                         guard !self.newTodo.isEmpty else { return }
-                        self.allTodos.append(TodoItem(todo: self.newTodo))
-                        self.newTodo = "" 
+                        let timezone = TimeZone(identifier: "Europe/Rome")!
+                        let seconds = TimeInterval(timezone.secondsFromGMT(for: Date()))
+                        let date = Date(timeInterval: seconds, since: Date())
+                        //let date = Date()
+                        let formattedDate = date.formatted(.iso8601.year().month().day())
+                        self.allTodos.append(TodoItem(todo: self.newTodo, dateAdded: formattedDate))
+                        self.newTodo = ""
                         self.saveTodos()
                     }) {
                         Image(systemName: "plus")
                     }
-                    /*Button(action:  {
-                        guard !self.newTodo.isEmpty else { return }
-                        self.allTodos.append(TodoItem(todo: self.newTodo))
-                        self.newTodo = ""
-                    }) {
-                        Image(systemName: "minus")
-                    }*/
                     .padding(.leading, 5)
                 }.padding()
                 List {
                     ForEach(allTodos) { todoItem in
-                        Text(todoItem.todo)
+                        VStack() {
+                            Text(todoItem.todo)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            Text(todoItem.dateAdded)
+                                .font(.system(size: 12, weight: .light))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding([.top], 5)
+                                .foregroundColor(.gray)
+
+                        }
                     }.onDelete(perform: deleteTodo)
                 }
             }
